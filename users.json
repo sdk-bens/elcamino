@@ -1,0 +1,52 @@
+{
+    "students": {
+        "rhm": {
+            "name": "Abderrahim",
+            "email": "Abderrahim@gmail.com",
+            "password": "rhm123",
+            "enrolled_courses": [
+                "Math"
+            ]
+        },
+        "srn": {
+            "name": "Sirine",
+            "email": "Sirine@gmail.com",
+            "password": "srn123",
+            "enrolled_courses": [
+                "Physics"
+            ]
+        },
+        "adm": {
+            "name": "Adam",
+            "email": "Adam@gmail.com",
+            "password": "adm123",
+            "enrolled_courses": []
+        }
+    },
+    "teachers": {
+        "rcm": {
+            "name": "Racim",
+            "email": "Racim@gmail.com",
+            "password": "rcm123",
+            "courses": [
+                "Math"
+            ]
+        },
+        "amn": {
+            "name": "Amani",
+            "email": "Amani@gmail.com",
+            "password": "amnB123",
+            "courses": [
+                "Physics"
+            ]
+        },
+        "Teacher": {
+            "name": "Teacher",
+            "email": "Teacher_C@gmail.com",
+            "password": "teacher123",
+            "courses": [
+                "Science"
+            ]
+        }
+    }
+}
