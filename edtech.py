@@ -118,7 +118,7 @@ def list_directories_and_pdfs(directory):
 
 # ---------- 🚀 Streamlit App ----------
 st.set_page_config(
-    page_title="🎓 EdTech - Algeria",
+    page_title="🎓 Fanak Education - Algeria",
     page_icon="favicon.ico",  # or emoji like "📘"
     layout="wide"
 )
@@ -137,7 +137,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 if 'logged_in' not in st.session_state or not st.session_state.logged_in:
     st.markdown("""
     <h1 style='text-align: center; margin-top: 0;'>
-        🎓 EdTech
+        🎓 Fanak.AI
     </h1>
 """, unsafe_allow_html=True)
 
@@ -195,15 +195,15 @@ if 'logged_in' not in st.session_state or not st.session_state.logged_in:
                     
        
 else:
-    st.title("👋 Welcome to EdTech Education")
+    st.title("👋 Welcome to Fanak.AI Education")
     st.markdown(f"#### Hello, `{st.session_state.user['name']}`! You are logged in as a **{st.session_state.user_role}**.")
     st.sidebar.title("🧩 Menu")
 
     if st.session_state.user_role == "Student":
         choice = st.sidebar.radio("", ["👤 Profile", "📚 Courses", "ℹ️ About", "📞 Contact Us", "🤖 EdTech AI", "🔓 Logout"])
 
-        if choice == "🤖 EdTech AI":
-            st.header("🤖 EdTech AI Tutor")
+        if choice == "🤖 Fanak AI":
+            st.header("🤖 Fanak AI Tutor")
             st.markdown("Ask me anything about **Math, Physics, or Science** from the 3rd year Algerian BAC curriculum!")
 
             if 'ai_chat_history' not in st.session_state:
@@ -214,6 +214,7 @@ else:
                             "You are a helpful, friendly AI tutor for 3rd year Algerian high school students. "
                             "You only help with topics from the Algerian BAC curriculum for Math, Physics, and Science. "
                             "If a user asks about something else, kindly say so."
+                            "Always start your response with 🦊 Fanak.AI:"
                         )
                     }
                 ]
