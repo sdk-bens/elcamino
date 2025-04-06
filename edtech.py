@@ -4,6 +4,8 @@ import os
 import base64
 import requests
 from dotenv import load_dotenv
+import pathlib
+
 load_dotenv()
 
 
@@ -426,10 +428,18 @@ else:
             else:
                 st.header("📘 Your Enrolled Courses")
                 course_selection = st.selectbox("🗂 Select a course", enrolled_courses)
+                # directory_map = {
+                #     "Math": "/Users/seddik/edtech/MATHS",
+                #     "Physics": "/Users/seddik/edtech/PHYSICS",
+                #     "Science": "/Users/seddik/edtech/SCIENCES"
+                # }
+
+                BASE_DIR = pathlib.Path(__file__).parent
+
                 directory_map = {
-                    "Math": "/Users/seddik/edtech/MATHS",
-                    "Physics": "/Users/seddik/edtech/PHYSICS",
-                    "Science": "/Users/seddik/edtech/SCIENCES"
+                    "Math": str(BASE_DIR / "MATHS"),
+                    "Physics": str(BASE_DIR / "PHYSICS"),
+                    "Science": str(BASE_DIR / "SCIENCES")
                 }
                 course_directory = directory_map[course_selection]
                 st.markdown(f"### 📚 {course_selection}")
@@ -570,11 +580,17 @@ else:
 
         elif choice == "📚 Courses":
             st.header("📝 Manage Your Courses")
+            # base_dir_map = {
+            #     "Math": "/Users/seddik/edtech/MATHS",
+            #     "Physics": "/Users/seddik/edtech/PHYSICS",
+            #     "Science": "/Users/seddik/edtech/SCIENCES"
+            # }
             base_dir_map = {
-                "Math": "/Users/seddik/edtech/MATHS",
-                "Physics": "/Users/seddik/edtech/PHYSICS",
-                "Science": "/Users/seddik/edtech/SCIENCES"
+                "Math": str(BASE_DIR / "MATHS"),
+                "Physics": str(BASE_DIR / "PHYSICS"),
+                "Science": str(BASE_DIR / "SCIENCES")
             }
+
 
             for course in st.session_state.user["courses"]:
                 st.subheader(f"📘 {course}")
