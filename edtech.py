@@ -10,8 +10,6 @@ BASE_DIR = pathlib.Path(__file__).parent
 
 load_dotenv()
 
-
-
 def is_in_scope_question(user_input):
     try:
         response = requests.post(
