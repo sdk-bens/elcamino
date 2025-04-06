@@ -119,17 +119,16 @@ def list_directories_and_pdfs(directory):
 # ---------- 🚀 Streamlit App ----------
 st.set_page_config(
     page_title="🎓 Fanak Education - Algeria",
-    page_icon="favicon.ico",  # or emoji like "📘"
+    page_icon="f🎓",  # or emoji like "📘"
     layout="wide"
 )
-hide_streamlit_style = """
+st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 
 
@@ -214,7 +213,7 @@ else:
                             "You are a helpful, friendly AI tutor for 3rd year Algerian high school students. "
                             "You only help with topics from the Algerian BAC curriculum for Math, Physics, and Science. "
                             "If a user asks about something else, kindly say so."
-                            "Always start your response with 🦊 Fanak.AI:"
+                            "Always start your response with 🎓 Fanak.AI:"
                         )
                     }
                 ]
