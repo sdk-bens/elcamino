@@ -6,6 +6,8 @@ import requests
 from dotenv import load_dotenv
 import pathlib
 
+BASE_DIR = pathlib.Path(__file__).parent
+
 load_dotenv()
 
 
@@ -448,7 +450,7 @@ else:
                 #     "Science": "/Users/seddik/edtech/SCIENCES"
                 # }
 
-                BASE_DIR = pathlib.Path(__file__).parent
+                
 
                 directory_map = {
                     "Math": str(BASE_DIR / "MATHS"),
