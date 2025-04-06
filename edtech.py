@@ -118,8 +118,8 @@ def list_directories_and_pdfs(directory):
 
 # ---------- 🚀 Streamlit App ----------
 st.set_page_config(
-    page_title="🎓 Fanak Education - Algeria",
-    page_icon="f🎓",  # or emoji like "📘"
+    page_title="Fanak Education - Algeria",
+    page_icon="🎓",  # or emoji like "📘"
     layout="wide"
 )
 st.markdown("""
