@@ -201,7 +201,7 @@ else:
     st.sidebar.title("🧩 Menu")
 
     if st.session_state.user_role == "Student":
-        choice = st.sidebar.radio("", ["👤 Profile", "📚 Courses", "ℹ️ About", "📞 Contact Us", "🤖 EdTech AI", "🔓 Logout"])
+        choice = st.sidebar.radio("", ["👤 Profile", "📚 Courses", "ℹ️ About", "📞 Contact Us", "🤖 Fanak AI", "🔓 Logout"])
 
         if choice == "🤖 Fanak AI":
             st.header("🤖 Fanak AI Tutor")
