@@ -117,7 +117,21 @@ def list_directories_and_pdfs(directory):
 
 
 # ---------- 🚀 Streamlit App ----------
-st.set_page_config(page_title="📚 EdTech - Algeria", layout="wide")
+st.set_page_config(
+    page_title="🎓 EdTech - Algeria",
+    page_icon="favicon.ico",  # or emoji like "📘"
+    layout="wide"
+)
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 
 
 if 'logged_in' not in st.session_state or not st.session_state.logged_in:
